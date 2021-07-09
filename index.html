@@ -5,12 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspa Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <div class="quoteBox" >
-            <p class="quoteString">Hey boss</p>
-            <button class="quoteButton">New Quote</button>
+    <div class="navContainer">
+        <div class="navLeft">
+            <div class="logo">
+                Visual Quotes
+            </div>
+        </div>
+        <div class="navRight">
+            <span style="font-size: 3em; color: Tomato;">
+                <a target="_blank" href="https://github.com/hassan-anees">
+                    <i class="fab fa-github"></i>
+                </a>
+                
+            </span>
+        </div>
+    </div>
+    <div class="cardContainer">
+        <div class="quoteBox">
+            <h3 class="quoteString">Quote String</h3>
+            <p class="authorString">Author String</p>
+            <button class="quoteButton custom-btn btn-1">New Quote</button>
         </div>
     </div>
     <script src="script.js"></script>

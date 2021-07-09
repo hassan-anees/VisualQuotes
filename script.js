@@ -1,19 +1,27 @@
-let str = document.querySelector(".quoteString").textContent; //document.getElementById("quoteString").textContent;
-console.log(str);
+let quoteHTML = document.querySelector(".quoteString");
+let authorHTML = document.querySelector(".authorString");
+let cardContainerHTML = document.querySelector(".cardContainer");
+let quoteButton = document.querySelector(".quoteButton");
 
 const getQuote = async () => {
     const response = await fetch("https://api.quotable.io/random");
     const data = await response.json();
-    let string = `${data.content} ----- ${data.author}`;
-    document.querySelector(".quoteString").innerHTML = string; //document.getElementById("quoteString").innerHTML = string;
-    printStr(string);
+    let quote = `${data.content}`;
+    let author = `—${data.author}`;
+    quoteHTML.innerHTML = quote;
+    authorHTML.innerHTML = author;
 };
 
-const printStr = (string) => {
-    console.log(string);
+const getPicturePicsum = async () => {
+    let w = window.screen.width;
+    let h = window.screen.height;
+    const response = await fetch(`https://picsum.photos/${w}/${h}`);
+    const data = await response;
+    cardContainerHTML.style.backgroundImage = `url("${data.url}")`;
 };
 
-document.querySelector(".quoteButton").addEventListener("click", getQuote);
+quoteButton.addEventListener("click", getQuote);
+quoteButton.addEventListener("click", getPicturePicsum);
 
-//printing quote at the start
 getQuote();
+getPicturePicsum();
