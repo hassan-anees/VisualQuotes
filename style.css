@@ -42,25 +42,22 @@ a {
 h3 {
     color: white;
     font-family: "Lato", sans-serif;
-    /* font-size: 20px; */
 }
 
 p {
     font-family: "Lato", sans-serif;
-    /* font-size: 20px; */
 }
+
 .cardContainer {
     display: flex;
     align-items: center;
     min-height: 93vh;
     justify-content: center;
     box-sizing: border-box;
-
-    background-image: url("");
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/c/c8/Very_Black_screen.jpg");
+    transition: background-image 1s ease-in-out 0.1s;
     background-repeat: no-repeat;
     background-position: center top;
-    /* background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.6); */
 }
 
 .quoteBox {
